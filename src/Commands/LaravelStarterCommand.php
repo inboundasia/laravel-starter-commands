@@ -82,7 +82,7 @@ class LaravelStarterCommand extends Command
             mkdir(app_path("Polices"));
         }
 
-        file_put_contents(app_path("Polices/{$CamelCase}Policy.php"), $string);
+        file_put_contents(app_path("Policies/{$CamelCase}Policy.php"), $string);
 
         return self::SUCCESS;
     }
