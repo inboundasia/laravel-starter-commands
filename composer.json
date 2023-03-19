@@ -1,6 +1,6 @@
 {
     "name": "inboundasa/laravel-starter-commands",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "library",
     "require": {
         "php": "^8.0",
