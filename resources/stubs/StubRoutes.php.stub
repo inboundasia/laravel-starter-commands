@@ -1,0 +1,5 @@
+Route::get('{PluralName}', [{CamelCase}Controller::class, 'index']);
+Route::get('{PluralName}/{{SnakeCase}}', [{CamelCase}Controller::class, 'show']);
+Route::post('{PluralName}', [{CamelCase}Controller::class, 'store']);
+Route::patch('{PluralName}/{{SnakeCase}}', [{CamelCase}Controller::class, 'update']);
+Route::delete('{PluralName}/{{SnakeCase}}', [{CamelCase}Controller::class, 'destroy']);

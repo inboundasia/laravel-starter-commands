@@ -1,0 +1,54 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\{CamelCase};
+use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class {CamelCase}Controller extends Controller
+{
+    public function __construct()
+    {
+        $this->authorizeResource({CamelCase}::class);
+    }
+
+    public function index()
+    {
+        ${PluralName} = QueryBuilder::for({CamelCase}::class)
+            ->paginate();
+
+        return JsonResource::collection(${PluralName});
+    }
+
+    public function show({CamelCase} ${SnakeCase})
+    {
+        return new JsonResource(${SnakeCase});
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->validate([]);
+
+        ${SnakeCase} = {CamelCase}::create($data);
+
+        return new JsonResource(${SnakeCase});
+    }
+
+    public function update(Request $request, {CamelCase} ${SnakeCase})
+    {
+        $data = $request->validate([]);
+
+        ${SnakeCase}->update($data);
+
+        return new JsonResource(${SnakeCase});
+    }
+
+    public function destroy({CamelCase} ${SnakeCase})
+    {
+        ${SnakeCase}->delete();
+
+        return new JsonResource(${SnakeCase});
+    }
+}
