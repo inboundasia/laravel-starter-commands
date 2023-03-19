@@ -1,9 +1,11 @@
 {
     "name": "inboundasa/laravel-starter-commands",
+    "version": "1.0.1",
     "require": {
         "php": "^8.0",
         "illuminate/support": "^8.0|^9.0|^10.0",
-        "illuminate/console": "^8.0|^9.0|^10.0"
+        "illuminate/console": "^8.0|^9.0|^10.0",
+        "phlak/semver": "^4.1"
     },
     "require-dev": {
         "orchestra/testbench": "^8.0"
@@ -22,5 +24,8 @@
                 "LaravelStarter": "InboundAsia\\Starter\\Facades\\LaravelStarter"
             }
         }
+    },
+    "scripts": {
+        "version": "@php version.php"
     }
 }
