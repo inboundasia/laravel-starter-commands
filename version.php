@@ -13,6 +13,9 @@ function ask(string $question, string $default = ''): string
     return $answer;
 }
 
+// preversion 
+shell_exec("git pull --tags");
+
 $composer = json_decode(file_get_contents('composer.json'), true);
 $version = new \PHLAK\SemVer\Version($composer['version']);
 
